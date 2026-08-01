@@ -1,6 +1,7 @@
 import sys
 
 def count_char_types(arg):
+  """This function counts the number of each type of character"""
   lower_case_count = 0
   upper_case_count = 0
   punctuation_count = 0
@@ -19,6 +20,9 @@ def count_char_types(arg):
     else:
       punctuation_count += 1
 
+  total_chacacters = upper_case_count + lower_case_count + punctuation_count + spaces_count + digit_count
+  
+  print(total_chacacters, "characters")
   print(upper_case_count, "upper letters")
   print(lower_case_count,"lower letters")
   print(punctuation_count, "punctuation marks")
@@ -26,6 +30,7 @@ def count_char_types(arg):
   print(digit_count, "digits")
 
 def ask_prompt():
+  """This function is triggered when there is one argument missing in the stdin"""
   print("What is the text to count?")
   prompt = ""
   try:
@@ -36,13 +41,14 @@ def ask_prompt():
   count_char_types(prompt)
       
 def main():
-  
+  """This is the main function"""
   try:
     assert len(sys.argv) <= 2, "you must provide exactly one string argument"
     if(len(sys.argv) == 1):
       return ask_prompt()
     arg = sys.argv[1]
     count_char_types(arg)
+    print(main.__doc__)
     
 
   except AssertionError as error:

@@ -1,6 +1,6 @@
 import datetime
 
-start_date = datetime.datetime(1970, 1, 1)
+start_date = datetime.datetime(2026, 7, 31)
 now = datetime.datetime.now()
 elapsed_time = (now - start_date).total_seconds()
 

@@ -10,13 +10,16 @@ def filterstring(words_list, integer):
     print(splitted_list)
 
 def valid_string(str_1):
+    """This function checks if the argument is a valid string"""
     for char in str_1:
         if char.isalpha() == False and char != ' ':
             return False
     return True
 
 def main():
+    """This is the main function"""
     try:
+        print(filter.__doc__)
         assert len(sys.argv) == 3, "you should enter 2 arguments"
         assert valid_string(sys.argv[1]), "first argument must be a string, with spaces only"
         assert sys.argv[2].isdigit(), "second argument must be an integer"

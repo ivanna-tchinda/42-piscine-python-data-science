@@ -5,8 +5,8 @@ def words_with_letter_a(word):
         return True
     return False
 
-def words_with_6_lettes(word):
-    if len(word) >= 6:
+def words_with_6_letters(word):
+    if len(word) == 6:
         return True
     return False
 
@@ -16,9 +16,10 @@ def ft_filter(list_1, func):
 
 
 def main():
+    """This is the main function, used to test the program"""
     list_1 = ["apple", "banana", "eee", "cucumber", "cashew"]
     func_1 = words_with_letter_a
-    func_2 = words_with_6_lettes
+    func_2 = words_with_6_letters
 
     print("first list: ", list_1)
 
