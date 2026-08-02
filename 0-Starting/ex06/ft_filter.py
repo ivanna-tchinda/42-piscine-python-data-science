@@ -10,7 +10,7 @@ def words_with_6_letters(word):
         return True
     return False
 
-def ft_filter(list_1, func):
+def ft_filter(func, list_1):
     newlist = [w for w in list_1 if func(w)]
     return newlist
 
@@ -23,10 +23,10 @@ def main():
 
     print("first list: ", list_1)
 
-    newlist = ft_filter(list_1, func_1)
+    newlist = ft_filter(func_1, list_1)
     print("filtered by letter a:", newlist)
 
-    newlist = ft_filter(list_1, func_2)
+    newlist = ft_filter(func_2, list_1)
     print("filtered by length:", newlist)
 
 if __name__ == "__main__":
