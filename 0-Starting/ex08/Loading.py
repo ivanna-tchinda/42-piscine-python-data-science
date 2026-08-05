@@ -2,6 +2,7 @@ import os
 
 
 def ft_tqdm(lst: range) -> None:
+    """This function reproduces the original tqdm function"""
     total = len(lst)
     term_width = os.get_terminal_size().columns
 
@@ -21,9 +22,8 @@ def ft_tqdm(lst: range) -> None:
             bar = "=" * (filled - 1) + ">" + " " * (bar_width - filled)
 
         print(
-            f"\r{percent:3.0f}%|{bar}| {i}/{total} [00:00<00:00, ?it/s]",
+            f"\r{percent:3.0f}%|{bar}| {i}/{total}",
             end="",
-            flush=True,
         )
 
         yield elem
