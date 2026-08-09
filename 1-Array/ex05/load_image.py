@@ -1,4 +1,7 @@
 import cv2
+from pimp_image import ft_invert
+
+
 
 def ft_load(path: str) -> list:
 
@@ -8,8 +11,8 @@ def ft_load(path: str) -> list:
     im = cv2.imread(path)
     if im is None:
         raise ValueError("Cannot load image")
+
     im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
-    print("The shape of image is", im.shape)
-    print(im)
+        
     
     return im
